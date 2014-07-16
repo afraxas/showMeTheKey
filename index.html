@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+        1.html 시각및 구조의 변경이 가해 지면 안된다.
+        
+
+        TODO
+        1. 특수키+숫자(1~100) 입력이 가능히야 한다.
+    -->
+    <style type="text/css">
+        body {
+          counter-reset: my-awesome-counter;
+        }
+        .ind {
+          counter-increment: my-awesome-counter;
+        }
+        
+        .ind:before {
+          content: counter(my-awesome-counter);
+        }
+
+
+    .m_search{
+
+        border : 3px solid green;
+        height: 100px;
+        width: 500px;    
+
+    }
+    a::after{
+        content: " "
+    }
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+        var map = []; // Or you could call it "key"
+        onkeydown = onkeyup = function(e){
+            console.log(e.keyCode)
+            e = e || event; // to deal with IE
+            map[e.keyCode] = e.type == 'keydown';
+            console.log(map)
+            if(map[16] && map[18]){
+               $(".m_search").show().find("input").focus();     
+            }
+
+            /*insert conditional here*/
+        }
+           function enterKey(e){
+              if(e.keyCode === 13){  /* IE기준으로 설명 */
+                console.log(e)
+                var val = $(e.target).val();
+                console.log($("a")[val]);
+                var href = $($("a")[val]).attr("href");
+                console.log("herf"+href)
+                alert(href)
+                location.href = href;
+//                $("iframe").attr("src",herf);
+              } 
+           }
+        $(function() {
+
+       });
+    </script>
+</head>
+<body>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.daum.com">naver.com</a>
+<a href="http://www.google.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+<a href="http://www.naver.com">naver.com</a>
+
+<div class="m_search" style="display:none">
+    <input id="gao" type="text" onkeypress="enterKey(event);">   
+</div>
+<iframe src="http://www.w3schools.com"></iframe>
+
+</body>
+</html>

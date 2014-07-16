@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        .aaaaaa{
+            border: dodgerblue 2px solid;
+        }
+    </style>
+
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="hotkey.js"></script>
+    <script>
+        function test(){
+
+
+            $("[name=search_box]").val("aaaaa")
+        }
+        $(document).bind('keydown', 'Ctrl+9', test);
+
+        $(document).bind('keydown', 'Ctrl', function(){
+            $("label").show();
+            $("input").addClass("aaaaaa");
+
+        });
+        $(document).bind('keyup', 'Ctrl', function(){
+            $("label").hide();
+            $("input").removeClass("aaaaaa");
+
+        });
+        $(document).bind('keyup', 'Ctrl+1', function(){
+            $("#ctl_1").focus();
+            $("label").hide();
+            $("input").removeClass("aaaaaa");
+
+        });
+
+    </script>
+</head>
+<body>
+
+
+<label for="search_box" style="display:none">Ctrl+1</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+2</label><input type="text" id="ctl_1" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+<label for="search_box" style="display:none">Ctrl+9</label><input type="text" id="search_box" name="search_box"/>
+<a href="www.naver.com">naver.com</a>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+        1.html 시각및 구조의 변경이 가해 지면 안된다.
+        
+
+        TODO
+        1. 특수키+숫자(1~100) 입력이 가능히야 한다.
+    -->
+    <style type="text/css">
+        body {
+          counter-reset: my-awesome-counter;
+        }
+        .ind {
+          counter-increment: my-awesome-counter;
+        }
+        
+        .ind:before {
+          content: counter(my-awesome-counter);
+        }
+
+
+    .m_search{
+
+        border : 3px solid green;
+        height: 100px;
+        width: 500px;    
+
+    }
+    a::after{
+        content: " "
+    }
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <script src="hotkey.js"></script>
+    <script>
+
+//       $(document).bind('keydown', 'Ctrl+9', test);
+/*        $(document).bind('keydown', 'Ctrl+1', function(){
+            $(".m_search").show();
+
+        });
+*/
+        $(document).bind('keydown', 'Alt', function(){
+            $("a").addClass("ind");
+            console.log("d")
+
+        });
+        $(document).bind('keyup', 'Alt', function(){
+            $("a").removeClass("ind");
+            console.log("d")
+
+        });
+        $(document).bind('keyup', 'Alt+1', function(){
+            console.log("1")
+//            $("a:first").click();
+            location.href = $("a:first").attr("href");
+
+        });
+        $(document).bind('keyup', 'Alt+2', function(){
+            $("a").removeClass("ind");
+            console.log("d")
+
+        });
+        $(document).bind('keyup', 'Alt+3', function(){
+            $("a").removeClass("ind");
+            console.log("d")
+
+        });
+
+        $(function() {
+
+       });
+    </script>
+</head>
+<body>
+<textarea>
+    
+    
+</textarea>
+
+</body>
+</html>

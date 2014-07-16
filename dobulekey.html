@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+        @Todo
+        1. 특수키+숫자(1~100) 입력이 가능히야 한다.
+
+        @Search
+        -   대박
+            http://stackoverflow.com/questions/5203407/javascript-multiple-keys-pressed-at-once
+        -   Ctrl + z 등 멀티키 입력 체크 방법
+            http://truepia.tistory.com/107
+        -   http://jsfiddle.net/B1KMusic/U5L2X/
+
+    -->
+    <script src="jquery-1.10.2.js"></script>
+    <script src="hotkey.js"></script>
+    <script>
+
+//       $(document).bind('keydown', 'Ctrl+9', test);
+/*        $(document).bind('keydown', 'Ctrl+1', function(){
+            $(".m_search").show();
+
+        });
+        $(document).bind('keydown', 'Alt', function(){
+
+            $("textarea").val("aaa")
+        });
+        $(function() {
+
+       });
+*/
+        var map = []; // Or you could call it "key"
+        onkeydown = onkeyup = function(e){
+            console.log(e.keyCode)
+            e = e || event; // to deal with IE
+            map[e.keyCode] = e.type == 'keydown';
+            console.log(map)
+            if(map[16] && map[18]){
+               $("#element").show()     
+            }
+            if(!map[16] && !map[18]){
+               $("#element").hide()     
+           }
+
+            /*insert conditional here*/
+        }
+/*        element.innerHTML = '';
+        var i, l = map.length;
+        for(i = 0; i < l; i ++){
+            if(map[i]){
+                element.innerHTML += '<hr>' + i;
+            }
+        }
+*/    </script>
+</head>
+<body>
+
+<div id="element">sdfd</div>
+
+</body>
+</html>
